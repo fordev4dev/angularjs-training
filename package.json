@@ -1,0 +1,24 @@
+{
+  "name": "angularjs-training",
+  "version": "1.0.0",
+  "author": "Tomasz Ducin <tomasz@ducin.it>",
+  "description": "AngularJS training repository",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ducin-public/angularjs-training"
+  },
+  "scripts": {
+    "test": "karma start",
+    "api": "node node_modules/mock-rest-api/bin/index.js",
+    "start": "http-server app"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.26",
+    "mock-rest-api": "^1.0.3"
+  }
+}
