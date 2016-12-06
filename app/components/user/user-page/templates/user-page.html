@@ -1,0 +1,37 @@
+<div class="starter-template col-md-8">
+    <button ng-click="$ctrl.fetchUsers()" type="button" class="btn btn-success">Load Users</button>
+    <div cg-busy="$ctrl.collectionPromise">
+        <h2 ng-if="!$ctrl.users" class="text-danger">no items</h2>
+
+        <div ng-if="$ctrl.users" class="center-block form-group" style="padding-top: 8px;">
+            <!--<user-table-form
+                departments="$ctrl.departments"
+                on-department-change="$ctrl.setDepartmentFilter(departmentId)"
+                on-order-change="$ctrl.setOrder(order)"
+            ></user-table-form>-->
+            <div class="form-horizontal">
+                <select-widget
+                    name="order"
+                    on-change="$ctrl.setOrder(element)"
+                    elements="$ctrl.orderColumns"
+                    default-option="---Please select order column---">
+                </select-widget>
+                <select-widget
+                    name="department"
+                    on-change="$ctrl.setDepartmentFilter(element)"
+                    elements="$ctrl.departments"
+                    default-option="---Please select department---">
+                </select-widget>
+            </div>
+            <user-table
+                users="$ctrl.users"
+                order="$ctrl.order"
+                fetch="$ctrl.fetchUsers()"
+            ></user-table>
+        </div>
+    </div>
+</div>
+
+<div class="user-bar col-md-4" cg-busy="$ctrl.userPromise">
+    <user-details user="$ctrl.user" ng-if="$ctrl.user"></user-details>
+</div>

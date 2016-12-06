@@ -1,4 +1,5 @@
 {
   "baseURL": "http://localhost:3000/",
-  "title": "HR Center"
+  "title": "HR Center",
+  "bonusFactor": 0.5
 }

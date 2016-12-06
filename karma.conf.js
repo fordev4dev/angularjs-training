@@ -13,10 +13,16 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/angular/angular.js',
+      'node_modules/angular-animate/angular-animate.min.js',
+      'node_modules/angular-touch/angular-touch.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
+      'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+      'node_modules/angular-busy/dist/angular-busy.js',
       // force order
       './app/app.module.js',
+      './dist/config.js',
       './app/**/*.module.js',
       // application
       './app/**/*.js',

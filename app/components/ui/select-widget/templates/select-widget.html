@@ -1,0 +1,9 @@
+<label class="col-sm-4 control-label">{{::$ctrl.name}}</label>
+<div class="col-sm-6">
+    <select class="col-sm-8 form-control"
+        ng-model="$ctrl.chosen"
+        ng-change="$ctrl.onChange({element: $ctrl.chosen})"
+        ng-options="element as element.type for element in $ctrl.elements">
+        <option value="">{{::$ctrl.defaultOption}}</option>
+    </select>
+</div>

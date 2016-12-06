@@ -1,0 +1,25 @@
+<div class="starter-template">
+  <h1>Bootstrap starter template</h1>
+  <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+  <div>
+    <p>Name: <input type="text" ng-model="demo.name"></p>
+    <h1>Hello {{ demo.name }}</h1>
+  </div>
+
+  <hr />
+
+  <input type="number" ng-model="demo.value">
+  <p>service(8): {{ demo.ns.octify(demo.value) }}</p>
+  <p>factory(8): {{ demo.nf.octify(demo.value) }}</p>
+  <p>provider(6): {{ demo.np.calculate(demo.value) }}</p>
+
+  <hr />
+
+  <input type="number" ng-model="demo.a">
+  +
+  <input type="number" ng-model="demo.b">
+  =
+  {{ demo.a + demo.b }}
+  <br />
+  <i>(initial sum was {{:: demo.a + demo.b }})</i>
+</div>

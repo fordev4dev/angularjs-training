@@ -1,0 +1,23 @@
+<div class="form-horizontal">
+    <label class="col-sm-4 control-label">order by</label>
+    <div class="col-sm-6">
+        <select class="col-sm-8 form-control"
+            ng-model="$ctrl.chosenOrder"
+            ng-change="$ctrl.onOrderChange({order: $ctrl.chosenOrder})">
+            <option value="">---Please select---</option>
+            <option value="firstName">first name</option>
+            <option value="lastName">last name</option>
+            <option value="age">age</option>
+            <option value="salary">salary</option>
+        </select>
+    </div>
+    <label class="col-sm-4 control-label">department</label>
+    <div class="col-sm-6">
+        <select class="col-sm-8 form-control"
+            ng-model="$ctrl.chosenDepartment"
+            ng-change="$ctrl.onDepartmentChange({departmentId: $ctrl.chosenDepartment})"
+            ng-options="department as department.type for department in $ctrl.departments">
+            <option value="">---Please select---</option>
+        </select>
+    </div>
+</div>

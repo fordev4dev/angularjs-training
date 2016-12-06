@@ -1,0 +1,43 @@
+<h2>user details</h2>
+<img ng-src="http://lorempixel.com/240/180/people/{{ $ctrl.user.id % 10 }}">
+<div>
+    <strong>name</strong>: {{ $ctrl.user | fullName }}
+</div>
+<div>
+    <strong>age</strong>: {{ $ctrl.user.age }}
+</div>
+<div>
+    <strong>email</strong>: <a ng-href="$ctrl.user.email">{{ $ctrl.user.email }}</a>
+</div>
+<div>
+    <strong>hired</strong>: {{ $ctrl.user.hiredAt | date: 'MM/dd/yyyy' }}
+</div>
+<div>
+    <strong>expires</strong>: {{ $ctrl.user.expiresAt | date: 'MM/dd/yyyy' }}
+</div>
+<div ng-if="$ctrl.user.retiresAt">
+    <strong>retires</strong>: {{ $ctrl.user.retiresAt | date: 'MM/dd/yyyy' }}
+</div>
+<div>
+    <strong>salary</strong>: {{ $ctrl.user.salary | currency }}
+</div>
+<strong>addresses</strong>
+<ul>
+    <li ng-repeat="address in $ctrl.user.addresses">
+        <em>{{$index + 1}}.<em>
+        {{ address.street }}
+        <br />
+        {{ address.city }}, {{ address.country }}
+    </li>
+</ul>
+<div>
+    <strong>bio</strong>:
+    <span class="animate-show" ng-show="$ctrl.user.showBio">
+        {{ ::$ctrl.user.bio }}
+        <a ng-click="$ctrl.toggleBio($ctrl.user)">show less</a>
+    </span>
+    <span class="animate-show" ng-hide="$ctrl.user.showBio">
+        {{ ::$ctrl.user.bio | shorten:20 }}
+        <a ng-click="$ctrl.toggleBio($ctrl.user)">show more</a>
+    </span>
+</div>
