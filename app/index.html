@@ -1,16 +1,13 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-touch.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-animate.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js"></script>
-        <script src="data.js"></script>
+        <link rel="stylesheet" type="text/css" href="vendors.css">
+        <link rel="stylesheet" type="text/css" href="app.min.css">
+        <script src="vendors.js"></script>
         <script src="app.js"></script>
+        <script src="config.js"></script>
+        <script src="templates.js"></script>
     </head>
-    <body ng-app="MyApp">
+    <body ng-app="app">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -41,7 +38,7 @@
                     <img src="favicon.ico" />
                 </div>
 
-                <div ng-controller="MyCtrl">
+                <div ng-controller="ExampleCtrl">
                     <p>Name: <input type="text" ng-model="name"></p>
                     <h1>Welcome, {{name}}</h1>
                 </div>

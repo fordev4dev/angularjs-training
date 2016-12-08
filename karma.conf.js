@@ -16,7 +16,8 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
       'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
       // force order
-      './app/app.js',
+      './app/app.module.js',
+      './app/**/*.module.js',
       // application
       './app/**/*.js',
       // './app/**/*.spec.js'

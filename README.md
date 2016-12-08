@@ -6,6 +6,10 @@ fetch all dependencies:
     npm install
     npm install -g http-server karma-cli
 
+continuous development mode:
+
+    npm run dev
+
 continuous unit tests:
 
     npm test
